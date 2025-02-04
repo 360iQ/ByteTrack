@@ -7,12 +7,12 @@ import torch
 
 from loguru import logger
 
-from yolox.data.data_augment import preproc
-from yolox.exp import get_exp
-from yolox.utils import fuse_model, get_model_info, postprocess
-from yolox.utils.visualize import plot_tracking
-from yolox.tracker.byte_tracker import BYTETracker
-from yolox.tracking_utils.timer import Timer
+from bytetrackx.data.data_augment import preproc
+from bytetrackx.exp import get_exp
+from bytetrackx.utils import fuse_model, get_model_info, postprocess
+from bytetrackx.utils.visualize import plot_tracking
+from bytetrackx.tracker.byte_tracker import BYTETracker
+from bytetrackx.tracking_utils.timer import Timer
 
 
 IMAGE_EXT = [".jpg", ".jpeg", ".webp", ".bmp", ".png"]

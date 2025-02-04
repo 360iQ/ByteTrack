@@ -3,9 +3,9 @@ from loguru import logger
 import torch
 from torch import nn
 
-from yolox.exp import get_exp
-from yolox.models.network_blocks import SiLU
-from yolox.utils import replace_module
+from bytetrackx.exp import get_exp
+from bytetrackx.models.network_blocks import SiLU
+from bytetrackx.utils import replace_module
 
 import argparse
 import os

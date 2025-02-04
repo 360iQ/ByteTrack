@@ -4,7 +4,7 @@ import tensorrt as trt
 import torch
 from torch2trt import torch2trt
 
-from yolox.exp import get_exp
+from bytetrackx.exp import get_exp
 
 import argparse
 import os

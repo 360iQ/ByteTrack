@@ -13,7 +13,7 @@ torch_ver = [int(x) for x in torch.__version__.split(".")[:2]]
 assert torch_ver >= [1, 3], "Requires PyTorch >= 1.3"
 
 
-with open("yolox/__init__.py", "r") as f:
+with open("bytetrackx/__init__.py", "r") as f:
     version = re.search(
         r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
         f.read(), re.MULTILINE
@@ -31,12 +31,20 @@ def get_install_requirements():
     return reqs
 
 
+def get_package_dir():
+    pkg_dir = {
+        "bytetrackx.tools": "tools",
+        "bytetrackx.exp.default": "exps/default",
+    }
+    return pkg_dir
+
+
 setuptools.setup(
     name="bytetrack",
     version="0.1.0",
     author="basedet team",
     url="https://github.com/360iQ/ByteTrack.git",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages() + list(get_package_dir().keys()),
     python_requires=">=3.6",
     install_requires=get_install_requirements(),
     setup_requires=["wheel"],  # avoid building error when pip is not updated

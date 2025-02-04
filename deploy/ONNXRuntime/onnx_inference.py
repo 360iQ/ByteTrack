@@ -7,11 +7,11 @@ from loguru import logger
 
 import onnxruntime
 
-from yolox.data.data_augment import preproc as preprocess
-from yolox.utils import mkdir, multiclass_nms, demo_postprocess, vis
-from yolox.utils.visualize import plot_tracking
-from yolox.tracker.byte_tracker import BYTETracker
-from yolox.tracking_utils.timer import Timer
+from bytetrackx.data.data_augment import preproc as preprocess
+from bytetrackx.utils import mkdir, multiclass_nms, demo_postprocess, vis
+from bytetrackx.utils.visualize import plot_tracking
+from bytetrackx.tracker.byte_tracker import BYTETracker
+from bytetrackx.tracking_utils.timer import Timer
 
 
 def make_parser():
