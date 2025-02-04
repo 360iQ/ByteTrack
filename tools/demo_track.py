@@ -28,7 +28,7 @@ def make_parser():
 
     parser.add_argument(
         #"--path", default="./datasets/mot/train/MOT17-05-FRCNN/img1", help="path to images or video"
-        "--path", default="./videos/palace.mp4", help="path to images or video"
+        "--path", default="./videos/risa1_30s.mp4", help="path to images or video"
     )
     parser.add_argument("--camid", type=int, default=0, help="webcam demo camera id")
     parser.add_argument(
@@ -48,14 +48,14 @@ def make_parser():
     parser.add_argument("-c", "--ckpt", default=None, type=str, help="ckpt for eval")
     parser.add_argument(
         "--device",
-        default="gpu",
+        default="cpu",
         type=str,
         help="device to run our model, can either be cpu or gpu",
     )
     parser.add_argument("--conf", default=None, type=float, help="test conf")
     parser.add_argument("--nms", default=None, type=float, help="test nms threshold")
     parser.add_argument("--tsize", default=None, type=int, help="test img size")
-    parser.add_argument("--fps", default=30, type=int, help="frame rate (fps)")
+    parser.add_argument("--fps", default=6, type=int, help="frame rate (fps)")
     parser.add_argument(
         "--fp16",
         dest="fp16",
@@ -157,7 +157,7 @@ class Predictor(object):
         img_info["width"] = width
         img_info["raw_img"] = img
 
-        img, ratio = preproc(img, self.test_size, self.rgb_means, self.std)
+        img, ratio = preproc(img, self.test_size)
         img_info["ratio"] = ratio
         img = torch.from_numpy(img).unsqueeze(0).float().to(self.device)
         if self.fp16:
