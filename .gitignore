@@ -139,3 +139,14 @@ docs/api
 events.out.tfevents*
 pretrained
 YOLOX_outputs
+/.idea/aws.xml
+/.idea/ByteTrack.iml
+/.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/videos/risa1.mp4
+/videos/risa1_1min.mp4
+/videos/risa1_30s.mp4
+/videos/test.mp4
+/.idea/vcs.xml
+/.idea/workspace.xml
