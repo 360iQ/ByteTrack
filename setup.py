@@ -21,12 +21,18 @@ def get_install_requirements():
     return reqs
 
 
+def get_package_dir():
+    pkg_dir = {
+        "bytetrack.tracker": "tracker",
+    }
+    return pkg_dir
+
 setuptools.setup(
     name="bytetrack",
     version="0.1.0",
     author="basedet team",
     url="https://github.com/360iQ/ByteTrack.git",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages() + list(get_package_dir().keys()),
     python_requires=">=3.6",
     install_requires=get_install_requirements(),
     setup_requires=["wheel"],
