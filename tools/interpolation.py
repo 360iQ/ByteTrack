@@ -3,7 +3,7 @@ import os
 import glob
 import motmetrics as mm
 
-from yolox.evaluators.evaluation import Evaluator
+from bytetrack.evaluators.evaluation import Evaluator
 
 
 def mkdir_if_missing(d):
