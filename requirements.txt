@@ -15,6 +15,7 @@ lap
 motmetrics
 filterpy
 h5py
+pandas==1.3.5
 
 # verified versions
 onnx==1.12.0
