@@ -37,7 +37,7 @@ setuptools.setup(
     install_requires=get_install_requirements(),
     setup_requires=["wheel"],
     long_description=long_description,
-    long_description_content_type="text/markdown",unnesesary
+    long_description_content_type="text/markdown",
     include_package_data=True,
     classifiers=["Programming Language :: Python :: 3", "Operating System :: OS Independent"],
     cmdclass={"build_ext": torch.utils.cpp_extension.BuildExtension},
