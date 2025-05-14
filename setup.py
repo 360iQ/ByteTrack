@@ -35,7 +35,7 @@ setuptools.setup(
     packages=list(get_package_dir().keys()),
     python_requires=">=3.6",
     install_requires=get_install_requirements(),
-    setup_requires=["wheel"],
+    setup_requires=["wheel", "torch"],
     long_description=long_description,
     long_description_content_type="text/markdown",
     include_package_data=True,
