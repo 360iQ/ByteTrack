@@ -7,7 +7,7 @@ opencv_python==4.7.0.72
 loguru==0.7.0
 scikit-image
 tqdm==4.67.1
-Pillow==9.4.0
+Pillow==11.2.1
 thop
 ninja==1.11.1
 tabulate==0.9.0
